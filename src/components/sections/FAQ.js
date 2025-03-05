@@ -28,33 +28,45 @@ export default function FAQ() {
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
+  const [sectionVisible, setSectionVisible] = useState(true);
 
   const toggleQuestion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const toggleSection = () => {
+    setSectionVisible(!sectionVisible);
+  };
+
   return (
     <section className={styles.faq} id="faq">
       <div className="container">
-        <h2 className="text-center">Perguntas Frequentes</h2>
+        <div className={styles.sectionHeader} onClick={toggleSection}>
+          <h2 className="text-center">Perguntas Frequentes</h2>
+          <span className={styles.sectionToggleIcon}>{sectionVisible ? '−' : '+'}</span>
+        </div>
         
-        {faqItems.map((item, index) => (
-          <div 
-            key={index} 
-            className={`${styles.question} ${openIndex === index ? styles.active : ''}`}
-          >
-            <h3 
-              onClick={() => toggleQuestion(index)}
-              className={styles.questionToggle}
-            >
-              {item.question}
-              <span className={styles.toggleIcon}>{openIndex === index ? '−' : '+'}</span>
-            </h3>
-            <div className={styles.answer} style={{ display: openIndex === index ? 'block' : 'none' }}>
-              <p>{item.answer}</p>
-            </div>
-          </div>
-        ))}
+        {sectionVisible && (
+          <>
+            {faqItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`${styles.question} ${openIndex === index ? styles.active : ''}`}
+              >
+                <h3 
+                  onClick={() => toggleQuestion(index)}
+                  className={styles.questionToggle}
+                >
+                  {item.question}
+                  <span className={styles.toggleIcon}>{openIndex === index ? '−' : '+'}</span>
+                </h3>
+                <div className={styles.answer} style={{ display: openIndex === index ? 'block' : 'none' }}>
+                  <p>{item.answer}</p>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </section>
   );

@@ -58,38 +58,51 @@ export default function ContentPreview() {
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
+  const [sectionVisible, setSectionVisible] = useState(true);
 
   const toggleChapter = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const toggleSection = () => {
+    setSectionVisible(!sectionVisible);
+  };
+
   return (
     <section className={styles.contentPreview} id="content">
       <div className="container">
-        <h2 className="text-center">O Que Você Vai Encontrar No Ebook</h2>
-        <p className="text-center">Um guia completo com 10 capítulos transformadores:</p>
-        
-        <div className={styles.chaptersList}>
-          {chapters.map((chapter, index) => (
-            <div 
-              key={index} 
-              className={`${styles.chapterItem} ${openIndex === index ? styles.active : ''}`}
-            >
-              <div 
-                className={styles.chapterHeader}
-                onClick={() => toggleChapter(index)}
-              >
-                <h3><strong>Capítulo {chapter.number}:</strong> {chapter.title}</h3>
-                <span className={styles.toggleIcon}>{openIndex === index ? '−' : '+'}</span>
-              </div>
-              <div className={styles.chapterDetails} style={{ display: openIndex === index ? 'block' : 'none' }}>
-                <p>{chapter.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className={styles.sectionHeader} onClick={toggleSection}>
+          <h2 className="text-center">O Que Você Vai Encontrar No Ebook</h2>
+          <span className={styles.sectionToggleIcon}>{sectionVisible ? '−' : '+'}</span>
         </div>
         
-        <p className="text-center">Além de materiais complementares, calendário de acompanhamento e recursos adicionais!</p>
+        {sectionVisible && (
+          <>
+            <p className="text-center">Um guia completo com 10 capítulos transformadores:</p>
+            
+            <div className={styles.chaptersList}>
+              {chapters.map((chapter, index) => (
+                <div 
+                  key={index} 
+                  className={`${styles.chapterItem} ${openIndex === index ? styles.active : ''}`}
+                >
+                  <div 
+                    className={styles.chapterHeader}
+                    onClick={() => toggleChapter(index)}
+                  >
+                    <h3><strong>Capítulo {chapter.number}:</strong> {chapter.title}</h3>
+                    <span className={styles.toggleIcon}>{openIndex === index ? '−' : '+'}</span>
+                  </div>
+                  <div className={styles.chapterDetails} style={{ display: openIndex === index ? 'block' : 'none' }}>
+                    <p>{chapter.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-center">Além de materiais complementares, calendário de acompanhamento e recursos adicionais!</p>
+          </>
+        )}
       </div>
     </section>
   );
