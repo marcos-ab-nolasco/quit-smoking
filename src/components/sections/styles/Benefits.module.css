@@ -1,0 +1,22 @@
+.benefits {
+  background-color: white;
+}
+
+.benefitsList {
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+.benefitsList li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.benefitsList li:before {
+  content: "✓";
+  color: #27ae60;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
