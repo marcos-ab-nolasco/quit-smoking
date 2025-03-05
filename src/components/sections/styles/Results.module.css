@@ -1,0 +1,25 @@
+.results {
+  background-color: #eaf2f8;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.stat {
+  flex-basis: 48%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .stat {
+    flex-basis: 100%;
+  }
+}

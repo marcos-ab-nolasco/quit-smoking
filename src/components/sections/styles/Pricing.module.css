@@ -1,0 +1,22 @@
+.pricing {
+  background-color: white;
+  text-align: center;
+}
+
+.priceTag {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #7f8c8d;
+  font-size: 1.8rem;
+}
+
+.discountPrice {
+  color: #e74c3c;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 15px;
+}
