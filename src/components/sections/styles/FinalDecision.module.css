@@ -1,0 +1,200 @@
+.finalDecision {
+  background-color: #34495e;
+  color: white;
+  padding: 70px 0;
+  position: relative;
+}
+
+.costCalculator {
+  background-color: rgba(52, 152, 219, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.costCalculator h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #3498db;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.costGrid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.costItem {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.costItem:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.costFigure {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 5px;
+}
+
+.costPeriod {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.costDescription {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.costNote {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lifeScenarios {
+  margin-top: 60px;
+}
+
+.scenarioContainer {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.scenario {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.scenario:first-child {
+  border-left: 5px solid #e74c3c;
+}
+
+.scenario:last-child {
+  border-left: 5px solid #2ecc71;
+}
+
+.scenario:hover {
+  transform: scale(1.02);
+}
+
+.scenario h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.scenario:first-child h3 {
+  color: #e74c3c;
+}
+
+.scenario:last-child h3 {
+  color: #2ecc71;
+}
+
+.scenario ul {
+  padding-left: 20px;
+}
+
+.scenario ul li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.finalMessage {
+  text-align: center;
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finalMessage p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.finalCta {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.finalCta:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.6);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  }
+}
+
+@media (max-width: 992px) {
+  .scenarioContainer {
+    flex-direction: column;
+  }
+  
+  .scenario {
+    margin-bottom: 20px;
+  }
+  
+  .scenario:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .costItem {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .finalCta {
+    width: 100%;
+    padding: 15px 20px;
+  }
+}

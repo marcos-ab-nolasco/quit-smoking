@@ -1,0 +1,104 @@
+.transformation {
+  background-color: #27ae60;
+  color: white;
+  padding: 70px 0;
+}
+
+.benefitsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.benefitCard {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefitCard h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.benefitCard p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.transformationQuote {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.transformationQuote p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.transformationQuote::before,
+.transformationQuote::after {
+  content: '"';
+  font-size: 4rem;
+  opacity: 0.2;
+  position: absolute;
+  color: white;
+}
+
+.transformationQuote::before {
+  top: -10px;
+  left: 10px;
+}
+
+.transformationQuote::after {
+  bottom: -40px;
+  right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .benefitsList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .benefitsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .benefitsList {
+    grid-template-columns: 1fr;
+  }
+  
+  .transformationQuote {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+}

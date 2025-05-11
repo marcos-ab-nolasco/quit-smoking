@@ -42,7 +42,7 @@ export default function FAQ() {
     <section className={styles.faq} id="faq">
       <div className="container">
         <div className={styles.sectionHeader} onClick={toggleSection}>
-          <h2 className="text-center">Perguntas Frequentes</h2>
+          <h2>Dúvidas comuns</h2>
           <span className={styles.sectionToggleIcon}>{sectionVisible ? '−' : '+'}</span>
         </div>
         
