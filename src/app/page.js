@@ -6,9 +6,7 @@ import Hero from '../components/sections/Hero';
 import SilentRobbery from '../components/sections/SilentRobbery'
 import Benefits from '../components/sections/Benefits';
 import HowItWorks from '../components/sections/HowItWorks';
-import VideoSection from '../components/sections/VideoSection';
 import Results from '../components/sections/Results';
-import Authors from '../components/sections/Authors';
 import Transformation from '../components/sections/Transformation'
 import ContentPreview from '../components/sections/ContentPreview';
 import Pricing from '../components/sections/Pricing';
@@ -23,15 +21,15 @@ export default function Home() {
       <Hero />
       <SilentRobbery />
       <HowItWorks />
-      <Benefits />
-      <Results />
-      <ContentPreview />
+      {/* <Benefits />
+      <Results /> */}
+      {/* <ContentPreview /> */}
       <Transformation />
-      <Pricing />
+      {/* <Pricing />
       <FAQ />
       <FormSection />
       <FinalDecision />
-      <Footer />
+      <Footer /> */}
     </Layout>
   );
 }
