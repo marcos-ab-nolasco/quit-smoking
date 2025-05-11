@@ -1,25 +1,454 @@
 .howItWorks {
-  background-color: #eaf2f8;
+  background-color: var(--primary-light-blue);
+  position: relative;
 }
 
-.steps {
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  color: var(--primary-dark-blue);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-red);
+}
+
+.subheading {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+.methodology {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 30px;
+  align-items: center;
+}
+
+.methodologyIntro {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 30px;
+}
+
+.methodologyIntro h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.methodologyIntro p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.pillarsDiagram {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.pillarConnector {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-red));
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+.pillarsContainer {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 1;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pillarIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  border: 3px solid var(--primary-blue);
+}
+
+.pillarLabel {
+  font-weight: 600;
+  color: var(--primary-dark-blue);
+}
+
+.processSteps {
+  margin-bottom: 60px;
 }
 
 .step {
-  flex-basis: 30%;
   background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stepHeader {
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark-blue));
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.stepNumber {
+  background-color: white;
+  color: var(--primary-dark-blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-right: 20px;
+}
+
+.stepHeader h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.stepContent {
+  padding: 25px 30px;
+}
+
+.stepContent p {
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  line-height: 1.7;
+}
+
+.stepFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stepFeatures li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stepFeatures li:last-child {
+  border-bottom: none;
+}
+
+.stepFeatures li:before {
+  content: "✓";
+  color: var(--primary-blue);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.bookPreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.bookStructure {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.bookStructure h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--primary-dark-blue);
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.bookStructure h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-red);
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chapter {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--background-off-white);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.chapter:hover {
+  background-color: var(--primary-light-blue);
+  transform: translateX(5px);
+}
+
+.chapterNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-right: 15px;
+  min-width: 40px;
+}
+
+.chapterInfo h4 {
+  margin: 0 0 5px;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.chapterInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.chapterContinuation {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.expertiseSection {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.expertiseSection h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary-dark-blue);
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.expertiseSection h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-red);
+}
+
+.expertiseSection p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.statBox {
+  flex: 1;
+  min-width: 100px;
+  background-color: var(--primary-light-blue);
+  padding: 20px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.statDescription {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark-blue) 100%);
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ctaText {
+  flex: 2;
+  min-width: 300px;
+}
+
+.ctaText h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.ctaText p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.ctaSection .btn {
+  flex: 1;
+  min-width: 250px;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  color: var(--primary-dark-blue);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.ctaSection .btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .methodology {
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .methodologyIntro {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  
+  .stepHeader {
+    padding: 15px 20px;
+  }
+  
+  .stepContent {
+    padding: 20px;
+  }
+  
+  .ctaSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .ctaText {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-  .step {
-    flex-basis: 100%;
+  .pillarsDiagram {
+    padding: 40px 0;
+  }
+  
+  .pillarIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  
+  .pillarLabel {
+    font-size: 0.9rem;
+  }
+  
+  .stepNumber {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+  
+  .stepHeader h3 {
+    font-size: 1.2rem;
+  }
+  
+  .statsContainer {
+    flex-direction: column;
+  }
+  
+  .statBox {
+    width: 100%;
   }
 }
