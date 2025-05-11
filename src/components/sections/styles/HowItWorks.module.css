@@ -163,6 +163,42 @@
   padding: 25px 30px;
 }
 
+.stepContentColumns {
+  display: flex;
+  gap: 30px;
+}
+
+.stepTextContent {
+  flex: 1;
+  min-width: 0; /* Importante para evitar overflow em contêineres flex */
+}
+
+.stepImageContent {
+  flex: 1;
+  min-width: 0; /* Importante para evitar overflow em contêineres flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepImagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: var(--primary-light-blue);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-dark-blue);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.step:hover .stepImagePlaceholder {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
 .stepContent p {
   margin-bottom: 20px;
   line-height: 1.7;
@@ -407,6 +443,18 @@
   .stepContent {
     padding: 20px;
   }
+
+  .stepContentColumns {
+    flex-direction: column;
+  }
+  
+  .stepImageContent {
+    margin-top: 20px;
+  }
+  
+  .stepImagePlaceholder {
+    height: 180px;
+  }
   
   .ctaSection {
     flex-direction: column;
@@ -442,6 +490,10 @@
   
   .stepHeader h3 {
     font-size: 1.2rem;
+  }
+
+  .stepImagePlaceholder {
+    height: 150px;
   }
   
   .statsContainer {

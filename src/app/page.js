@@ -4,11 +4,11 @@ import './globals.css';
 import Layout from '../components/Layout';
 import Hero from '../components/sections/Hero';
 import SilentRobbery from '../components/sections/SilentRobbery'
-import Benefits from '../components/sections/Benefits';
 import HowItWorks from '../components/sections/HowItWorks';
-import Results from '../components/sections/Results';
+// import Benefits from '../components/sections/Benefits';
+// import Results from '../components/sections/Results';
+// import ContentPreview from '../components/sections/ContentPreview';
 import Transformation from '../components/sections/Transformation'
-import ContentPreview from '../components/sections/ContentPreview';
 import Pricing from '../components/sections/Pricing';
 import FAQ from '../components/sections/FAQ';
 import FormSection from '../components/sections/FormSection';
@@ -25,11 +25,11 @@ export default function Home() {
       <Results /> */}
       {/* <ContentPreview /> */}
       <Transformation />
-      {/* <Pricing />
+      <Pricing />
       <FAQ />
       <FormSection />
       <FinalDecision />
-      <Footer /> */}
+      <Footer />
     </Layout>
   );
 }
