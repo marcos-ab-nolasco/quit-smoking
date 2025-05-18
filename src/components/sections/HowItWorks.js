@@ -10,7 +10,8 @@ const HowItWorks = () => {
         'Mapeamento detalhado dos seus gatilhos emocionais',
         'Avaliação precisa do seu nível real de dependência',
         'Preparação mental para o processo de mudança'
-      ]
+      ],
+      imagePlaceholder: 'Imagem: Consciência' // Aqui está a nova propriedade
     },
     {
       number: '2',
@@ -20,7 +21,8 @@ const HowItWorks = () => {
         'Técnicas específicas para cada tipo de fissura',
         'Métodos para substituir comportamentos automáticos',
         'Ferramentas para momentos de crise e situações sociais'
-      ]
+      ],
+      imagePlaceholder: 'Imagem: Estratégias' // Aqui está a nova propriedade
     },
     {
       number: '3',
@@ -30,7 +32,8 @@ const HowItWorks = () => {
         'Rituais diários para fortalecer sua nova identidade',
         'Visualizações guiadas para reprogramação mental',
         'Técnicas para celebrar pequenas vitórias no caminho'
-      ]
+      ],
+      imagePlaceholder: 'Imagem: Transformaçao' // Aqui está a nova propriedade
     }
   ];
 
@@ -86,12 +89,21 @@ const HowItWorks = () => {
                 <h3>{step.title}</h3>
               </div>
               <div className={styles.stepContent}>
-                <p>{step.description}</p>
-                <ul className={styles.stepFeatures}>
-                  {step.features.map((feature, fIndex) => (
-                    <li key={fIndex}>{feature}</li>
-                  ))}
-                </ul>
+                <div className={styles.stepContentColumns}>
+                  <div className={styles.stepTextContent}>
+                    <p>{step.description}</p>
+                    <ul className={styles.stepFeatures}>
+                      {step.features.map((feature, fIndex) => (
+                        <li key={fIndex}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.stepImageContent}>
+                    <div className={styles.stepImagePlaceholder}>
+                      <span>{step.imagePlaceholder}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

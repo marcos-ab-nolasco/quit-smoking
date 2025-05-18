@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './styles/Hero.module.css';
 
 const Hero = () => {
@@ -39,9 +40,16 @@ const Hero = () => {
           </div>
           <div className={styles.heroImage}>
             {/* This is where you'll add your hero image */}
-            <div className={styles.imagePlaceholder}>
+            {/* <div className={styles.imagePlaceholder}>
               <span>Imagem do E-book</span>
-            </div>
+            </div> */}
+            <Image
+              src='/images/ebook-capa.png'
+              alt='Capa do Ebook'
+              width={300}
+              height={600}
+              className={styles.heroImg}
+            />
           </div>
         </div>
         {/* <div className={styles.heroStats}>

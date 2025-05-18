@@ -1,80 +1,142 @@
 import styles from './styles/FinalDecision.module.css';
 
-export default function FinalDecision() {
-  // Cálculo do custo do cigarro ao longo do tempo
-  const cigaretteCostPerDay = 20; // Custo aproximado de um maço
-  const costPerMonth = cigaretteCostPerDay * 30;
-  const costPerYear = costPerMonth * 12;
-  const costPerDecade = costPerYear * 10;
-
+const FinalDecision = () => {
   return (
     <section className={styles.finalDecision} id="final-decision">
       <div className="container">
-        <h2 className="text-center">O Que Está Realmente em Jogo</h2>
-        
-        {/* <div className={styles.costCalculator}>
-          <h3>O Custo Real do Cigarro na Sua Vida</h3>
-          
-          <div className={styles.costGrid}>
-            <div className={styles.costItem}>
-              <div className={styles.costFigure}>R$ {costPerMonth.toLocaleString()}</div>
-              <div className={styles.costPeriod}>Por Mês</div>
-              <div className={styles.costDescription}>Um jantar especial com quem você ama</div>
+        <div className={styles.sectionHeader}>
+          <h2>Chegou o Momento da Sua Decisão</h2>
+          <p className={styles.subheading}>
+            Dois caminhos se abrem à sua frente. A escolha que você fizer agora determinará sua realidade pelos próximos anos
+          </p>
+        </div>
+
+        <div className={styles.pathsContainer}>
+          <div className={styles.pathCard} data-path="current">
+            <div className={styles.pathHeader}>
+              <h3>Continuando Como Está</h3>
+              <div className={styles.pathIcon}>⚠️</div>
             </div>
-            
-            <div className={styles.costItem}>
-              <div className={styles.costFigure}>R$ {costPerYear.toLocaleString()}</div>
-              <div className={styles.costPeriod}>Por Ano</div>
-              <div className={styles.costDescription}>Uma viagem inesquecível para conhecer novos lugares</div>
-            </div>
-            
-            <div className={styles.costItem}>
-              <div className={styles.costFigure}>R$ {costPerDecade.toLocaleString()}</div>
-              <div className={styles.costPeriod}>Em 10 Anos</div>
-              <div className={styles.costDescription}>A entrada para sua casa própria ou um carro zero</div>
+            <div className={styles.pathContent}>
+              <ul className={styles.realityList}>
+                <li>
+                  <strong>Saúde Comprometida:</strong> Acordar com tosse, cansaço constante e capacidade respiratória cada vez menor
+                </li>
+                <li>
+                  <strong>Dependência Diária:</strong> Planejamento constante para garantir que nunca faltará cigarro, ansiedade quando não pode fumar
+                </li>
+                <li>
+                  <strong>Dinheiro Desperdiçado:</strong> Mais de R$6.000 por ano literalmente queimados, sem contar gastos com saúde
+                </li>
+                <li>
+                  <strong>Relações Prejudicadas:</strong> Ausências em momentos importantes para "dar uma saidinha", exemplo negativo para filhos
+                </li>
+                <li>
+                  <strong>Autoestima Diminuída:</strong> Sensação de impotência diante do vício, culpa e frustração após cada cigarro
+                </li>
+                <li>
+                  <strong>Futuro Incerto:</strong> Riscos crescentes de doenças graves, qualidade de vida em declínio gradual e silencioso
+                </li>
+              </ul>
+              <div className={styles.personalMessage}>
+                <p>"A cada cigarro que acendo, uma parte de mim sabe que estou escolhendo o conforto momentâneo em troca do meu futuro."</p>
+              </div>
             </div>
           </div>
-          
-          <p className={styles.costNote}>E isso sem considerar gastos com saúde, perda de produtividade, odor em roupas e móveis...</p>
-        </div> */}
-        
-        <div className={styles.lifeScenarios}>
-          <div className={styles.scenarioContainer}>
-            <div className={styles.scenario}>
-              <h3>Sua Vida Sem Mudanças</h3>
-              <ul>
-                <li>Acordar todos os dias com aquela tosse persistente</li>
-                <li>Planejamento constante para garantir que nunca faltará cigarro</li>
-                <li>Evitar certas atividades porque não poderá fumar</li>
-                <li>Olhares de desaprovação em espaços públicos</li>
-                <li>Sensação frequente de culpa e impotência diante do vício</li>
-                <li>Saúde deteriorando gradualmente, com sintomas cada vez mais preocupantes</li>
-                <li>Incerteza sobre quanto tempo ainda tem de vida saudável</li>
-              </ul>
+
+          <div className={styles.pathDivider}>
+            <div className={styles.dividerLine}></div>
+            <div className={styles.dividerText}>OU</div>
+            <div className={styles.dividerLine}></div>
+          </div>
+
+          <div className={styles.pathCard} data-path="liberated">
+            <div className={styles.pathHeader}>
+              <h3>Sua Nova Vida Após o Método</h3>
+              <div className={styles.pathIcon}>🌟</div>
             </div>
-            
-            <div className={styles.scenario}>
-              <h3>Sua Nova Vida Como Não-Fumante</h3>
-              <ul>
-                <li>Despertar revigorado, respirando profundamente sem dificuldade</li>
-                <li>Liberdade para ir onde quiser, sem a preocupação constante com o próximo cigarro</li>
-                <li>Sabor intenso nas refeições, redescobrindo prazeres simples da vida</li>
-                <li>Orgulho nos olhos dos seus filhos, parceiro ou pais ao verem sua conquista</li>
-                <li>Economia substancial que permite realizar sonhos antes adiados</li>
-                <li>Confiança renovada na sua capacidade de superar desafios</li>
-                <li>Paz de espírito ao saber que adicionou anos de qualidade à sua vida</li>
+            <div className={styles.pathContent}>
+              <ul className={styles.realityList}>
+                <li>
+                  <strong>Vitalidade Renovada:</strong> Despertar revigorado, respirar profundamente sem dificuldade, energia para atividades que ama
+                </li>
+                <li>
+                  <strong>Liberdade Reconquistada:</strong> Fim da dependência, capacidade genuína de relaxar naturalmente, sem ansiedade constante
+                </li>
+                <li>
+                  <strong>Prosperidade Financeira:</strong> Economia substancial que permite realizar sonhos antes adiados por falta de recursos
+                </li>
+                <li>
+                  <strong>Relacionamentos Fortalecidos:</strong> Presença plena em momentos especiais, exemplo inspirador para pessoas próximas
+                </li>
+                <li>
+                  <strong>Confiança Recuperada:</strong> Orgulho pela conquista, autoestima elevada, capacidade provada de superar desafios
+                </li>
+                <li>
+                  <strong>Futuro Promissor:</strong> Anos de vida recuperados, riscos de saúde drasticamente reduzidos, qualidade de vida crescente
+                </li>
               </ul>
+              <div className={styles.personalMessage}>
+                <p>"A decisão que tomei de me libertar não foi apenas sobre parar de fumar – foi sobre reclamar minha vida e meu potencial pleno."</p>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.decisionSection}>
+          <div className={styles.decisionQuote}>
+            <p>"A liberdade está a apenas uma decisão de distância. Não é sobre força de vontade – é sobre ter o método certo."</p>
+          </div>
           
+          {/* <div className={styles.countersSection}>
+            <div className={styles.counterItem}>
+              <div className={styles.counterNumber} id="days-counter">37.991</div>
+              <div className={styles.counterLabel}>Dias de cigarro economizados</div>
+            </div>
+            <div className={styles.counterItem}>
+              <div className={styles.counterNumber} id="money-counter">R$ 2.279.460</div>
+              <div className={styles.counterLabel}>Economizados por nossos leitores</div>
+            </div>
+            <div className={styles.counterItem}>
+              <div className={styles.counterNumber} id="users-counter">10.843</div>
+              <div className={styles.counterLabel}>Pessoas libertas do cigarro</div>
+            </div>
+          </div> */}
+
+          {/* <div className={styles.timelineElement}>
+            <div className={styles.timelineDots}>
+              <div className={styles.timelineDot} data-time="today">
+                <span className={styles.dotLabel}>Hoje</span>
+              </div>
+              <div className={styles.timelineLine}></div>
+              <div className={styles.timelineDot} data-time="decision">
+                <span className={styles.dotLabel}>Sua Decisão</span>
+              </div>
+              <div className={styles.timelineLine}></div>
+              <div className={styles.timelineDot} data-time="freedom">
+                <span className={styles.dotLabel}>Sua Liberdade</span>
+              </div>
+            </div>
+          </div> */}
+
           <div className={styles.finalMessage}>
-            <p>Você está a apenas uma decisão de distância da vida que realmente merece viver. Não é apenas sobre parar de fumar — é sobre reclamar o controle da sua saúde, das suas finanças e do seu futuro.</p>
-            <p>Pense nas pessoas que você ama. Na vida que você sonha. Nas experiências que ainda quer viver.</p>
-            <p>Invista hoje no seu bem mais precioso: você mesmo.</p>
-            <a href="#pricing" className={styles.finalCta}>QUERO TRANSFORMAR MINHA VIDA AGORA</a>
+            <p>Pense nas pessoas que você ama. Na saúde que você merece. No potencial que espera para ser realizado.</p>
+            <p>O único arrependimento que ex-fumantes têm é não ter parado antes. Não deixe que mais um dia se passe com essa sensação.</p>
+          </div>
+          
+          <div className={styles.finalCta}>
+            <a href="#purchase-form" className={styles.ctaButton}>
+              QUERO COMEÇAR MINHA NOVA VIDA AGORA
+            </a>
+            <div className={styles.ctaMeta}>
+              {/* <span className={styles.secureIcon}>🔒</span> Compra 100% segura • Acesso imediato • Garantia de 7 dias */}
+              <span className={styles.secureIcon}>🔒</span> Compra 100% segura • Acesso imediato
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default FinalDecision;
