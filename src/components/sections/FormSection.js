@@ -1,29 +1,30 @@
 "use client";
 
-import { useState } from 'react';
+// import { useState } from 'react';
+// import Image from 'next/image';
 import styles from './styles/FormSection.module.css';
 
 
 const FormSection = () => {
-    const [email, setEmail] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    // const [email, setEmail] = useState('');
+    // const [isSubmitting, setIsSubmitting] = useState(false);
   
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setIsSubmitting(true);
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   // setIsSubmitting(true);
       
-      // Aqui você pode opcionalmente capturar o email para sua lista antes de redirecionar
-      // Exemplo de código para salvar o email em sua lista:
-      // saveEmailToList(email).then(() => {
-      //   window.location.href = 'https://kiwify.app/seu-produto';
-      // });
+    //   // Aqui você pode opcionalmente capturar o email para sua lista antes de redirecionar
+    //   // Exemplo de código para salvar o email em sua lista:
+    //   // saveEmailToList(email).then(() => {
+    //   //   window.location.href = 'https://kiwify.app/seu-produto';
+    //   // });
       
-      // Ou simplesmente redirecionar:
-      setTimeout(() => {
-        window.location.href = 'https://kiwify.app/seu-produto';
-        setIsSubmitting(false);
-      }, 500);
-    };
+    //   // Ou simplesmente redirecionar:
+    //   setTimeout(() => {
+    //     window.location.href = 'https://kiwify.app/seu-produto';
+    //     // setIsSubmitting(false);
+    //   }, 500);
+    // };
   
     return (
       <section className={styles.purchaseForm} id="purchase-form">
@@ -58,7 +59,7 @@ const FormSection = () => {
               {/* Link direto alternativo (se quiser pular o formulário) */}
               <div className={styles.directLinkContainer}>
                 <a 
-                  href="https://kiwify.app/seu-produto" 
+                  href="https://pay.kiwify.com.br/DDYndDS" 
                   className={`btn btn-lg ${styles.kiwifyDirectLink}`}
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -96,6 +97,14 @@ const FormSection = () => {
                   <div className={styles.productImagePlaceholder}>
                     <span>Capa E-book</span>
                   </div>
+
+                  {/* <Image
+                    src='/images/ebook-capa.png'
+                    alt='Capa do Ebook'
+                    width={45}
+                    height={80}
+                    className={styles.productImg}
+                  /> */}
                   <div className={styles.productDetails}>
                     <h4>E-book "Liberte-se do Cigarro"</h4>
                     <p>Guia completo para abandonar o cigarro definitivamente</p>
