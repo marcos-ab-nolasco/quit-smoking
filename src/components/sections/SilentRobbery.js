@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './styles/SilentRobbery.module.css';
 
 const SilentRobbery = () => {
@@ -25,9 +26,19 @@ const SilentRobbery = () => {
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
                 {/* Image placeholder */}
-                <div className={styles.imagePlaceholder}>
+                {/* <div className={styles.imagePlaceholder}>
                   <span>Imagem: Impacto Físico</span>
-                </div>
+                </div> */}
+                <Image 
+                  src="/images/physica-steal.webp" 
+                  alt="Impacto físico do cigarro" 
+                  width={400} 
+                  height={200} 
+                  // fill
+                  // style={{ height: 'auto', width: '100%' }} // Se quiser responsivo
+                  // layout="responsive" 
+                  // placeholder="blur" 
+                />
               </div>
               <div className={styles.cardText}>
                 <p>Cada tragada danifica progressivamente seus pulmões, coração e vasos sanguíneos. O cigarro rouba sua capacidade pulmonar, acelera o envelhecimento da pele e reduz seu paladar e olfato.</p>
@@ -53,9 +64,19 @@ const SilentRobbery = () => {
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
                 {/* Image placeholder */}
-                <div className={styles.imagePlaceholder}>
+                {/* <div className={styles.imagePlaceholder}>
                   <span>Imagem: Impacto Emocional</span>
-                </div>
+                </div> */}
+                <Image 
+                  src="/images/emotial-steal-new.png" 
+                  alt="Impacto emocional do cigarro" 
+                  width={600} 
+                  height={300} 
+                  // style={{ height: 'auto', width: '100%' }} // Se quiser responsivo
+                  // fill
+                  // layout="responsive" 
+                  // placeholder="blur" 
+                />
               </div>
               <div className={styles.cardText}>
                 <p>O cigarro cria um ciclo vicioso de ansiedade: você fuma para aliviar o estresse, mas é o próprio cigarro que cria esse desconforto quando os níveis de nicotina caem.</p>
@@ -81,9 +102,17 @@ const SilentRobbery = () => {
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
                 {/* Image placeholder */}
-                <div className={styles.imagePlaceholder}>
+                <Image 
+                  src="/images/social-steal.webp" 
+                  alt="Impacto social do cigarro" 
+                  width={600} 
+                  height={300} 
+                  // layout="responsive" 
+                  // placeholder="blur" 
+                />
+                {/* <div className={styles.imagePlaceholder}>
                   <span>Imagem: Impacto Social</span>
-                </div>
+                </div> */}
               </div>
               <div className={styles.cardText}>
                 <p>Momentos preciosos com pessoas queridas são interrompidos pela necessidade de fumar. Relacionamentos são afetados pelo cheiro, pela saúde comprometida e pelo exemplo negativo.</p>
@@ -109,9 +138,17 @@ const SilentRobbery = () => {
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
                 {/* Image placeholder */}
-                <div className={styles.imagePlaceholder}>
+                {/* <div className={styles.imagePlaceholder}>
                   <span>Imagem: Impacto Financeiro</span>
-                </div>
+                </div> */}
+                  <Image 
+                    src="/images/financial-steal.webp" 
+                    alt="Impacto financeiro do cigarro" 
+                    width={600} 
+                    height={300} 
+                    // layout="responsive" 
+                    // placeholder="blur" 
+                  />
               </div>
               <div className={styles.cardText}>
                 <p>Um fumante médio gasta uma pequena fortuna em cigarros ao longo da vida. Sem contar custos indiretos com saúde, seguros mais caros e dias de trabalho perdidos.</p>

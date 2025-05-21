@@ -121,6 +121,11 @@ section {
   font-weight: 700;
 }
 
+.dark-highlight {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
 .limited-offer {
   background-color: #f9e79f;
   padding: 10px 20px;

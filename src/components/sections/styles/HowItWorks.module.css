@@ -175,10 +175,22 @@
 
 .stepImageContent {
   flex: 1;
-  min-width: 0; /* Importante para evitar overflow em contêineres flex */
+  /* min-width: 0; Importante para evitar overflow em contêineres flex */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+
+.stepImage {
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover .stepImage {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .stepImagePlaceholder {

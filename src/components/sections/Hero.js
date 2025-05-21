@@ -13,7 +13,7 @@ const Hero = () => {
             <h1>LIBERTE-SE DO CIGARRO</h1>
             <h2>O Guia Definitivo Para Quem Quer Parar de Fumar <span className="highlight">De Uma Vez Por Todas</span></h2>
             <p>
-              Descubra o método holístico e cientificamente fundamentado que já ajudou mais de 10.000 pessoas a abandonarem o cigarro, recuperarem sua saúde e economizarem milhares de reais.
+              Uma abordagem holística, que trata não apenas os sintomas físicos, mas também os aspectos psicológicos, emocionais e comportamentais para ajudar você a se livrar da dependência do cigarro.
             </p>
             <div className={styles.heroButtons}>
               <a href="#pricing" className="btn btn-lg">
@@ -44,10 +44,10 @@ const Hero = () => {
               <span>Imagem do E-book</span>
             </div> */}
             <Image
-              src='/images/ebook-capa.png'
+              src='/images/ebook-capa.webp'
               alt='Capa do Ebook'
               width={300}
-              height={600}
+              height={420}
               className={styles.heroImg}
             />
           </div>

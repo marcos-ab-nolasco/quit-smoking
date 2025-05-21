@@ -1,7 +1,7 @@
 "use client";
 
 // import { useState } from 'react';
-// import Image from 'next/image';
+import Image from 'next/image';
 import styles from './styles/FormSection.module.css';
 
 
@@ -94,17 +94,17 @@ const FormSection = () => {
                 <h3>O Que Você Receberá</h3>
                 
                 <div className={styles.productSummary}>
-                  <div className={styles.productImagePlaceholder}>
+                  {/* <div className={styles.productImagePlaceholder}>
                     <span>Capa E-book</span>
-                  </div>
+                  </div> */}
 
-                  {/* <Image
-                    src='/images/ebook-capa.png'
+                  <Image
+                    src='/images/ebook-capa.webp'
                     alt='Capa do Ebook'
-                    width={45}
-                    height={80}
+                    width={75}
+                    height={105}
                     className={styles.productImg}
-                  /> */}
+                  />
                   <div className={styles.productDetails}>
                     <h4>E-book "Liberte-se do Cigarro"</h4>
                     <p>Guia completo para abandonar o cigarro definitivamente</p>
