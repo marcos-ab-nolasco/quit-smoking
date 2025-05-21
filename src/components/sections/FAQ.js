@@ -29,7 +29,7 @@ const FAQ = () => {
     },
     {
       question: "O que acontece após a compra? Como recebo o material?",
-      answer: "Imediatamente após a confirmação do seu pagamento, você receberá um e-mail com o link para download do e-book em formato PDF e todos os materiais complementares. O acesso é instantâneo, permitindo que você comece sua jornada imediatamente. O e-mail também conterá instruções para acessar o suporte via e-mail durante 30 dias, caso tenha dúvidas ao longo do processo."
+      answer: "Após a confirmação do pagamento, você será redirecionado automaticamente para a área de clientes do Kiwifi, onde terá acesso imediato ao e-book em formato PDF e aos materiais complementares. Você também receberá um e-mail com as instruções de acesso e informações sobre o suporte via e-mail, disponível por 30 dias para esclarecer dúvidas ao longo do processo."
     },
     {
       question: "Preciso de conhecimentos técnicos para usar o e-book?",

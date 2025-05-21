@@ -96,9 +96,22 @@
 }
 
 .imageContainer {
-  width: 100%;
-  height: 180px;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* width: 100%;
+  height: 200px; */
   overflow: hidden;
+}
+
+.imageContainer img,
+.imageContainer :global(img) {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover; /* ou 'contain' se preferir ver toda a imagem */
 }
 
 .imagePlaceholder {

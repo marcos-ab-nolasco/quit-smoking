@@ -188,12 +188,13 @@
 }
 
 .productImg {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%; */
+  /* height: auto; */
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transform: perspective(1000px) rotateY(-15deg);
   transition: all 0.5s ease;
+  align-self: center;
 }
 
 .productImagePlaceholder {
@@ -212,6 +213,7 @@
 
 .productDetails {
   flex-grow: 1;
+  padding-left: 5%;
 }
 
 .productDetails h4 {
