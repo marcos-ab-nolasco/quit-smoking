@@ -80,7 +80,7 @@ const FormSection = () => {
                     <span className={styles.paymentIcon}>🏦</span>
                     <span className={styles.paymentIcon}>📱</span>
                   </div>
-                  <span>Aceitamos todos os cartões, boleto e Pix</span>
+                  <span>Aceitamos todos os cartões e Pix</span>
                 </div>
                 
                 {/* <div className={styles.guaranteeNotice}>

@@ -97,7 +97,7 @@ const Pricing = () => {
                 <span className={styles.secureIcon}>🔒</span> Pagamento 100% seguro
               </p>
               <div className={styles.paymentMethods}>
-                <span>Aceitamos Pix, cartão de crédito e boleto</span>
+                <span>Aceitamos Pix e cartão de crédito.</span>
               </div>
             </div>
           </div>
