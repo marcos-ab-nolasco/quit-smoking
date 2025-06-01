@@ -110,7 +110,7 @@ const FormSection = () => {
                     <p>Guia completo para abandonar o cigarro definitivamente</p>
                     <div className={styles.productPrice}>
                       <span className={styles.originalPrice}>De R$ 60</span>
-                      <span className={styles.currentPrice}>Por R$ 27</span>
+                      <span className={styles.currentPrice}>Por R$ 29,99</span>
                     </div>
                   </div>
                 </div>
