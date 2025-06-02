@@ -375,19 +375,28 @@
   padding: 20px 15px;
   border-radius: 8px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.statNumber {
-  font-size: 2rem;
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.statTitle {
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-blue);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .statDescription {
   font-size: 0.85rem;
   color: var(--text-dark);
   line-height: 1.4;
+  margin: 0;
 }
 
 .ctaSection {
@@ -434,6 +443,36 @@
 .ctaSection .btn:hover {
   background-color: transparent;
   color: white;
+}
+
+.scientificBasis {
+  background-color: var(--primary-light-blue);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.scientificBasis h4 {
+  margin: 0 0 15px;
+  color: var(--primary-dark-blue);
+  font-size: 1.1rem;
+} 
+
+.scientificBasis ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.scientificBasis li {
+  padding: 8px 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.scientificBasis li:last-child {
+  border-bottom: none;
 }
 
 /* Responsive styles */
@@ -510,9 +549,23 @@
   
   .statsContainer {
     flex-direction: column;
+    gap: 15px;
   }
   
   .statBox {
     width: 100%;
+    padding: 15px;
+  }
+  
+  .statIcon {
+    font-size: 2rem;
+  }
+  
+  .statTitle {
+    font-size: 1rem;
+  }
+  
+  .statDescription {
+    font-size: 0.8rem;
   }
 }

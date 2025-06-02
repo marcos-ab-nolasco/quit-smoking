@@ -1,6 +1,8 @@
 import styles from './styles/FinalDecision.module.css';
+import { useTracking } from '../../hooks/userTracking';
 
 const FinalDecision = () => {
+  const { trackLead } = useTracking();
   return (
     <section className={styles.finalDecision} id="final-decision">
       <div className="container">
@@ -125,7 +127,7 @@ const FinalDecision = () => {
           </div>
           
           <div className={styles.finalCta}>
-            <a href="#purchase-form" className={styles.ctaButton}>
+            <a href="#purchase-form" className={styles.ctaButton} onClick={trackLead}>
               QUERO COMEÇAR MINHA NOVA VIDA AGORA
             </a>
             <div className={styles.ctaMeta}>

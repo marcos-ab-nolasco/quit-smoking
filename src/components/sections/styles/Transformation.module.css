@@ -343,6 +343,137 @@
   font-size: 1.1rem;
 }
 
+.transformationCta {
+  background: linear-gradient(135deg, var(--primary-light-blue) 0%, #e8f4f8 100%);
+  padding: 50px 40px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 60px 0;
+  border: 1px solid var(--border-light);
+}
+
+.ctaContent h3 {
+  color: var(--primary-dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.ctaContent p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  margin-bottom: 15px;
+}
+
+.ctaNote {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.scientificValidation {
+  background-color: white;
+  padding: 50px 40px;
+  border-radius: 15px;
+  margin: 60px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.scientificValidation h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-dark-blue);
+  font-size: 1.6rem;
+}
+
+.validationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.validationCard {
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--background-off-white);
+  border: 1px solid var(--border-light);
+}
+
+.validationIcon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.validationCard h4 {
+  color: var(--primary-dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.validationCard p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.finalCtaSection {
+  margin-top: 80px;
+}
+
+.finalCtaBox {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark-blue) 100%);
+  color: white;
+  padding: 50px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.finalCtaBox h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.finalCtaBox p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scientificCta {
+  background-color: white;
+  color: var(--primary-dark-blue);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.scientificCta:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.scientificCredits {
+  opacity: 0.7;
+}
+
+.scientificCredits small {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
   .transformationsGrid {
@@ -363,6 +494,11 @@
   
   .resultsOverview {
     padding: 40px 30px;
+  }
+  
+  .validationGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -393,5 +529,15 @@
   
   .ctaContainer p {
     font-size: 1.1rem;
+  }
+
+  .transformationCta,
+  .finalCtaBox {
+    padding: 30px 20px;
+  }
+  
+  .ctaContent h3,
+  .finalCtaBox h3 {
+    font-size: 1.5rem;
   }
 }

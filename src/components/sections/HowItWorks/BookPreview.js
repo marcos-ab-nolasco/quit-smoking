@@ -39,25 +39,37 @@ const BookPreview = () => (
       </div>
     </div>
     <div className={styles.expertiseSection}>
-      <h3>Um Método Fundamentado na Ciência</h3>
+      <h3>Método Fundamento em Neurociência</h3>
       <p>
-        Nosso guia integra décadas de pesquisas científicas sobre cessação do tabagismo, psicologia 
-        comportamental e neuroplasticidade, transformando conceitos complexos em estratégias 
-        práticas e acessíveis.
+        Nosso guia integra pesquisas científicas sobre cessação do tabagismo, princípios 
+        comprovados da psicologia comportamental e técnicas validadas de neuroplasticidade, para criar 
+        um processo estruturado e personalizável.
       </p>
       <div className={styles.statsContainer}>
         <div className={styles.statBox}>
-          <div className={styles.statNumber}>3x</div>
-          <div className={styles.statDescription}>mais eficaz que métodos convencionais</div>
+          <div className={styles.statIcon}>🔬</div>
+          <div className={styles.statTitle}>Científico</div>
+          <div className={styles.statDescription}>Baseado em pesquisas validadas</div>
         </div>
         <div className={styles.statBox}>
-          <div className={styles.statNumber}>10+</div>
-          <div className={styles.statDescription}>anos de pesquisa e aplicação prática</div>
+          <div className={styles.statIcon}>🎯</div>
+          <div className={styles.statTitle}>Completo</div>
+          <div className={styles.statDescription}>Mente, corpo e comportamento</div>
         </div>
         <div className={styles.statBox}>
-          <div className={styles.statNumber}>87%</div>
-          <div className={styles.statDescription}>de taxa de sucesso a longo prazo</div>
+          <div className={styles.statIcon}>⚡</div>
+          <div className={styles.statTitle}>Prático</div>
+          <div className={styles.statDescription}>Ferramentas do dia a dia</div>
         </div>
+      </div>
+      <div className={styles.scientificBasis}>
+        <h4>Fundamentação Científica</h4>
+        <ul>
+          <li>Modelo Transteórico de Mudança (Prochaska & DiClemente)</li>
+          <li>Terapia de Aceitação e Compromisso para cessação tabágica</li>
+          <li>Princípios de neuroplasticidade aplicada</li>
+          <li>Técnicas de prevenção de recaída validadas</li>
+        </ul>
       </div>
     </div>
   </div>

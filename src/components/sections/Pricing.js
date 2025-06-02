@@ -1,6 +1,8 @@
 import styles from './styles/Pricing.module.css';
+import { useTracking } from '../../hooks/userTracking';
 
 const Pricing = () => {
+  const { trackLead } = useTracking();
   return (
     <section className={styles.pricing} id="pricing">
       <div className="container">
@@ -92,7 +94,7 @@ const Pricing = () => {
             </div>
 
             <div className={styles.actionContainer}>
-              <a href="#purchase-form" className="btn btn-lg">QUERO ME LIBERTAR AGORA</a>
+              <a href="#purchase-form" className="btn btn-lg" onClick={trackLead}>QUERO ME LIBERTAR AGORA</a>
               <p className={styles.securePayment}>
                 <span className={styles.secureIcon}>🔒</span> Pagamento 100% seguro
               </p>
@@ -177,7 +179,7 @@ const Pricing = () => {
         <div className={styles.finalCta}>
           <h3>Sua Liberdade Está a Apenas Um Clique de Distância</h3>
           <p>Não adie a decisão que vai transformar sua saúde, suas finanças e sua vida como um todo</p>
-          <a href="#purchase-form" className="btn btn-lg">QUERO TER ACESSO AO MÉTODO COMPLETO</a>
+          <a href="#purchase-form" className="btn btn-lg" onClick={trackLead}>QUERO TER ACESSO AO MÉTODO COMPLETO</a>
         </div>
       </div>
     </section>

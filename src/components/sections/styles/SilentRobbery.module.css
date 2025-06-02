@@ -249,6 +249,67 @@
   margin: 0;
 }
 
+.urgencySection {
+  background: linear-gradient(135deg, var(--primary-dark-orange) 0%, var(--accent-dark-red) 100%);
+  color: var(--text-light);
+  padding: 50px 40px;
+  border-radius: 15px;
+  margin-top: 60px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(231, 76, 60, 0.3);
+}
+
+.urgencyContent h3 {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.urgencyContent p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.urgencyStats {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px 0;
+}
+
+.urgencyStat {
+  text-align: center;
+}
+
+.urgencyNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.urgencyLabel {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.urgencyBtn {
+  background-color: white;
+  color: var(--accent-red);
+  border: 2px solid white;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+.urgencyBtn:hover {
+  background-color: transparent;
+  color: white;
+}
+
 /* Responsive styles */
 @media (max-width: 992px) {
   .robberyGrid {
@@ -262,6 +323,11 @@
   
   .realityCard, .actionCard {
     width: 100%;
+  }
+  
+  .urgencyStats {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -293,5 +359,17 @@
   
   .imageContainer {
     height: 150px;
+  }
+  
+  .urgencyNumber {
+    font-size: 2rem;
+  }
+
+  .urgencySection {
+    padding: 30px 20px;
+  }
+  
+  .urgencyContent h3 {
+    font-size: 1.5rem;
   }
 }
