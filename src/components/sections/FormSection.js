@@ -3,9 +3,11 @@
 // import { useState } from 'react';
 import Image from 'next/image';
 import styles from './styles/FormSection.module.css';
+import { useTracking } from '../../hooks/userTracking';
 
 
 const FormSection = () => {
+  const { trackPurchase } = useTracking();
     // const [email, setEmail] = useState('');
     // const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -63,6 +65,7 @@ const FormSection = () => {
                   className={`btn btn-lg ${styles.kiwifyDirectLink}`}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={trackPurchase}
                 >
                   QUERO TRANSFORMAR MINHA VIDA AGORA
                 </a>
