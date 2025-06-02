@@ -104,6 +104,7 @@ const FormSection = () => {
                     width={75}
                     height={105}
                     className={styles.productImg}
+                    loading='lazy'
                   />
                   <div className={styles.productDetails}>
                     <h4>E-book "Liberte-se do Cigarro"</h4>

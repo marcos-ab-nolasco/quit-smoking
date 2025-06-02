@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import styles from './styles/SilentRobbery.module.css';
+import { useTracking } from '../../hooks/userTracking';
 
 const SilentRobbery = () => {
+  const { trackLead } = useTracking();
   return (
     <section className={styles.silentRobbery} id="silent-robbery">
       <div className="container">
@@ -17,7 +19,6 @@ const SilentRobbery = () => {
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <div className={styles.icon}>
-                  {/* Icon placeholder - replace with actual icon */}
                   <span className={styles.iconPlaceholder}>🫁</span>
                 </div>
               </div>
@@ -25,19 +26,12 @@ const SilentRobbery = () => {
             </div>
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
-                {/* Image placeholder */}
-                {/* <div className={styles.imagePlaceholder}>
-                  <span>Imagem: Impacto Físico</span>
-                </div> */}
                 <Image 
                   src="/images/physica-steal.webp" 
                   alt="Impacto físico do cigarro" 
                   width={400} 
                   height={200} 
-                  // fill
-                  // style={{ height: 'auto', width: '100%' }} // Se quiser responsivo
-                  // layout="responsive" 
-                  // placeholder="blur" 
+                  loading='lazy'
                 />
               </div>
               <div className={styles.cardText}>
@@ -55,7 +49,6 @@ const SilentRobbery = () => {
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <div className={styles.icon}>
-                  {/* Icon placeholder - replace with actual icon */}
                   <span className={styles.iconPlaceholder}>😔</span>
                 </div>
               </div>
@@ -63,19 +56,12 @@ const SilentRobbery = () => {
             </div>
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
-                {/* Image placeholder */}
-                {/* <div className={styles.imagePlaceholder}>
-                  <span>Imagem: Impacto Emocional</span>
-                </div> */}
                 <Image 
-                  src="/images/emotial-steal-new.png" 
+                  src="/images/emotional-steal.webp" 
                   alt="Impacto emocional do cigarro" 
                   width={600} 
-                  height={300} 
-                  // style={{ height: 'auto', width: '100%' }} // Se quiser responsivo
-                  // fill
-                  // layout="responsive" 
-                  // placeholder="blur" 
+                  height={300}
+                  loading='lazy'
                 />
               </div>
               <div className={styles.cardText}>
@@ -93,7 +79,6 @@ const SilentRobbery = () => {
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <div className={styles.icon}>
-                  {/* Icon placeholder - replace with actual icon */}
                   <span className={styles.iconPlaceholder}>👨‍👩‍👧‍👦</span>
                 </div>
               </div>
@@ -101,18 +86,13 @@ const SilentRobbery = () => {
             </div>
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
-                {/* Image placeholder */}
                 <Image 
                   src="/images/social-steal.webp" 
                   alt="Impacto social do cigarro" 
                   width={600} 
                   height={300} 
-                  // layout="responsive" 
-                  // placeholder="blur" 
+                  loading='lazy'
                 />
-                {/* <div className={styles.imagePlaceholder}>
-                  <span>Imagem: Impacto Social</span>
-                </div> */}
               </div>
               <div className={styles.cardText}>
                 <p>Momentos preciosos com pessoas queridas são interrompidos pela necessidade de fumar. Relacionamentos são afetados pelo cheiro, pela saúde comprometida e pelo exemplo negativo.</p>
@@ -129,7 +109,6 @@ const SilentRobbery = () => {
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <div className={styles.icon}>
-                  {/* Icon placeholder - replace with actual icon */}
                   <span className={styles.iconPlaceholder}>💰</span>
                 </div>
               </div>
@@ -137,17 +116,12 @@ const SilentRobbery = () => {
             </div>
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
-                {/* Image placeholder */}
-                {/* <div className={styles.imagePlaceholder}>
-                  <span>Imagem: Impacto Financeiro</span>
-                </div> */}
                   <Image 
                     src="/images/financial-steal.webp" 
                     alt="Impacto financeiro do cigarro" 
                     width={600} 
                     height={300} 
-                    // layout="responsive" 
-                    // placeholder="blur" 
+                    loading='lazy'
                   />
               </div>
               <div className={styles.cardText}>
@@ -180,10 +154,35 @@ const SilentRobbery = () => {
             <h3>A Dura Realidade</h3>
             <p>Se nada mudar, a qualidade da sua vida diminuirá progressivamente a cada dia - muito antes dos problemas de saúde mais graves aparecerem. O cigarro está roubando seu presente e hipotecando seu futuro.</p>
           </div>
-          {/* <div className={styles.actionCard}>
-            <a href="#pricing" className="btn">QUERO RECUPERAR MINHA VIDA</a>
-            <p className={styles.actionText}>Descubra como parar de fumar <u>sem sofrimento</u> com nosso método comprovado</p>
-          </div> */}
+          <div className={styles.actionCard}>
+            <a href="#purchase-form" className="btn" onClick={trackLead}>QUERO RECUPERAR MINHA VIDA</a>
+            <p className={styles.actionText}>Descubra como parar de fumar <u>sem sofrimento</u> com nosso método científico</p>
+          </div>
+        </div>
+
+        {/* Nova seção de urgência estratégica */}
+        <div className={styles.urgencySection}>
+          <div className={styles.urgencyContent}>
+            <h3>A Cada Dia Que Passa, O Roubo Continua</h3>
+            <p>Enquanto você lê este texto, seu corpo está sendo privado de oxigênio, sua carteira está sendo esvaziada e momentos preciosos com quem você ama estão sendo perdidos para sempre.</p>
+            <div className={styles.urgencyStats}>
+              <div className={styles.urgencyStat}>
+                <span className={styles.urgencyNumber}>R$ 20</span>
+                <span className={styles.urgencyLabel}>perdidos hoje</span>
+              </div>
+              <div className={styles.urgencyStat}>
+                <span className={styles.urgencyNumber}>220</span>
+                <span className={styles.urgencyLabel}>minutos de vida reduzidos</span>
+              </div>
+              <div className={styles.urgencyStat}>
+                <span className={styles.urgencyNumber}>∞</span>
+                <span className={styles.urgencyLabel}>momentos perdidos</span>
+              </div>
+            </div>
+            <a href="#purchase-form" className={`btn btn-lg ${styles.urgencyBtn}`} onClick={trackLead}>
+              PARAR O ROUBO AGORA
+            </a>
+          </div>
         </div>
       </div>
     </section>

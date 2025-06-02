@@ -93,13 +93,13 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className={styles.additionalSupport}>
+        {/* <div className={styles.additionalSupport}>
           <h3>Ainda tem dúvidas?</h3>
           <p>Entre em contato conosco diretamente e teremos prazer em ajudar</p>
           <a href="mailto:suporte@liberte-se.com" className={styles.supportLink}>
             <span className={styles.emailIcon}>✉️</span> suporte@liberte-se.com
           </a>
-        </div>
+        </div> */}
         
         {/* <div className={styles.faqCta}>
           <h3>Pronto para transformar sua vida?</h3>
