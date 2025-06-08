@@ -154,10 +154,10 @@ const SilentRobbery = () => {
             <h3>A Dura Realidade</h3>
             <p>Se nada mudar, a qualidade da sua vida diminuirá progressivamente a cada dia - muito antes dos problemas de saúde mais graves aparecerem. O cigarro está roubando seu presente e hipotecando seu futuro.</p>
           </div>
-          <div className={styles.actionCard}>
+          {/* <div className={styles.actionCard}>
             <a href="#purchase-form" className="btn" onClick={trackLead}>QUERO RECUPERAR MINHA VIDA</a>
             <p className={styles.actionText}>Descubra como parar de fumar <u>sem sofrimento</u> com nosso método científico</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Nova seção de urgência estratégica */}
@@ -179,9 +179,9 @@ const SilentRobbery = () => {
                 <span className={styles.urgencyLabel}>momentos perdidos</span>
               </div>
             </div>
-            <a href="#purchase-form" className={`btn btn-lg ${styles.urgencyBtn}`} onClick={trackLead}>
+            {/* <a href="#purchase-form" className={`btn btn-lg ${styles.urgencyBtn}`} onClick={trackLead}>
               PARAR O ROUBO AGORA
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

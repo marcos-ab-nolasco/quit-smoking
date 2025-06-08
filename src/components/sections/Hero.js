@@ -101,9 +101,9 @@ const Hero = () => {
             <p className={styles.reminderText}>
               Seu corpo está esperando pela oportunidade de se regenerar. Dê a ele essa chance hoje.
             </p>
-            <a href="#purchase-form" className={`btn ${styles.reminderCta}`} onClick={trackLead}>
+            {/* <a href="#purchase-form" className={`btn ${styles.reminderCta}`} onClick={trackLead}>
               PARAR DE PERDER, COMEÇAR A GANHAR
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

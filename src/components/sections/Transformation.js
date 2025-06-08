@@ -84,7 +84,7 @@ const Transformation = () => {
         </div>
 
         {/* CTA estratégico após mostrar benefícios */}
-        <div className={styles.transformationCta}>
+        {/* <div className={styles.transformationCta}>
           <div className={styles.ctaContent}>
             <h3>Você Está Pronto Para Experimentar Estas Transformações?</h3>
             <p>Cada uma dessas mudanças está ao seu alcance. O método científico que vai guiá-lo através de cada etapa desta jornada está disponível agora.</p>
@@ -93,7 +93,7 @@ const Transformation = () => {
               <p className={styles.ctaNote}>Acesso imediato • Baseado em neurociência • Resultados reais</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Seção de validação científica baseada no conteúdo real */}
         <div className={styles.scientificValidation}>
@@ -122,9 +122,9 @@ const Transformation = () => {
           <div className={styles.finalCtaBox}>
             <h3>A Ciência Comprova: Seu Corpo QUER Se Recuperar</h3>
             <p>Você não precisa acreditar apenas nas nossas palavras. A literatura científica confirma cada benefício listado acima. O que você precisa agora é do método correto para chegar lá.</p>
-            <a href="#purchase-form" className={`btn btn-lg ${styles.scientificCta}`} onClick={trackLead}>
+            {/* <a href="#purchase-form" className={`btn btn-lg ${styles.scientificCta}`} onClick={trackLead}>
               ACESSAR O MÉTODO CIENTÍFICO COMPLETO
-            </a>
+            </a> */}
             <div className={styles.scientificCredits}>
               <small>Baseado nos trabalhos de: Dr. Alan Marlatt, Dr. Andrew Huberman, Dr. James Clear, Dr. Matthew Walker, entre outros</small>
             </div>
