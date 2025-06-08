@@ -16,7 +16,7 @@ const HowItWorks = () => {
         <NarrativeSection />
         <Methodology />
         <BookPreview />
-        <CTASection />
+        {/* <CTASection /> */}
       </div>
     </section>
   );
