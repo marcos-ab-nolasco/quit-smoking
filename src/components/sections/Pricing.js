@@ -1,5 +1,40 @@
+import { useEffect, useState } from 'react';
 import styles from './styles/Pricing.module.css';
 import { useTracking } from '../../hooks/userTracking';
+
+function Countdown() {
+  const targetDate = new Date('2025-06-15T12:00:00-03:00'); // Horário de Brasília
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(interval);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  
+  if (timeLeft.days + timeLeft.hours + timeLeft.minutes + timeLeft.seconds <= 0) return null;
+  
+  return (
+    <div className={styles.countdownContainer}>
+      <span className={styles.countdownLabel}>Oferta termina em:</span>{' '}
+      <span className={styles.countdownTime}>
+        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+      </span>
+    </div>
+  );
+  }
 
 const Pricing = () => {
   const { trackLead } = useTracking();
@@ -68,6 +103,7 @@ const Pricing = () => {
               </div>
 
               <div className={styles.currentOffer}>
+                <Countdown />
                 <div className={styles.offerBadge}>Oferta por Tempo Limitado</div>
                 <div className={styles.priceContainer}>
                   <div className={styles.originalPrice}>De <span>R$ 90,00</span></div>
