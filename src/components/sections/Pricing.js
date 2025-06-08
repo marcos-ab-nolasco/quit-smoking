@@ -70,10 +70,10 @@ const Pricing = () => {
               <div className={styles.currentOffer}>
                 <div className={styles.offerBadge}>Oferta por Tempo Limitado</div>
                 <div className={styles.priceContainer}>
-                  <div className={styles.originalPrice}>De <span>R$ 60</span></div>
+                  <div className={styles.originalPrice}>De <span>R$ 90,00</span></div>
                   <div className={styles.currentPrice}>
                     <span className={styles.currency}>R$</span>
-                    <span className={styles.amount}>29,99</span>
+                    <span className={styles.amount}>49,99</span>
                   </div>
                   <div className={styles.paymentTerms}>Pagamento único</div>
                 </div>
@@ -144,7 +144,7 @@ const Pricing = () => {
           <div className={styles.comparisonContainer}>
             <div className={styles.comparisonCol}>
               <h4>Investindo no E-book</h4>
-              <div className={styles.priceTag}>R$ 29,99</div>
+              <div className={styles.priceTag}>R$ 49,99</div>
               <ul className={styles.benefitsList}>
                 <li>Pagamento único</li>
                 <li>Acesso vitalício ao material</li>

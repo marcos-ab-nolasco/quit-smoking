@@ -113,8 +113,8 @@ const FormSection = () => {
                     <h4>E-book "Liberte-se do Cigarro"</h4>
                     <p>Guia completo para abandonar o cigarro definitivamente</p>
                     <div className={styles.productPrice}>
-                      <span className={styles.originalPrice}>De R$ 60</span>
-                      <span className={styles.currentPrice}>Por R$ 29,99</span>
+                      <span className={styles.originalPrice}>De R$ 99,00</span>
+                      <span className={styles.currentPrice}>Por R$ 49,99</span>
                     </div>
                   </div>
                 </div>
